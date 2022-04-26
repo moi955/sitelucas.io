@@ -5,6 +5,22 @@
   list-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.sous-page {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100vh;
+  background-color: #eaeaea;
 }
 
 header {
@@ -19,7 +35,7 @@ header {
       justify-content: space-around;
   background-color: black;
   color: white;
-  padding: 20px;
+  padding: 30px;
   position: -webkit-sticky;
   position: sticky;
   top: 0%;
@@ -40,6 +56,10 @@ header .name {
           align-items: center;
 }
 
+header .name img {
+  width: 50px;
+}
+
 header .list-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,7 +70,7 @@ header .list-menu ul {
 }
 
 header .list-menu ul li {
-  width: 125px;
+  width: 200px;
   text-align: center;
 }
 
@@ -77,7 +97,7 @@ header .reseau ul {
 }
 
 header .reseau ul li {
-  width: 125px;
+  width: 110px;
   text-align: center;
 }
 
@@ -87,7 +107,7 @@ header .reseau ul img {
 
 #lien {
   text-decoration: none;
-  color: white;
+  color: rgba(0, 0, 0, 0.8);
   font-weight: 900;
   text-transform: uppercase;
   font-family: arial;
@@ -134,6 +154,7 @@ header .reseau ul img {
   background: url("../assets/fond2.png");
   background-position: center;
   background-size: cover;
+  /* background-color: rgb(234, 234, 234); */
   position: relative;
 }
 
@@ -176,6 +197,8 @@ header .reseau ul img {
 }
 
 .page .grid .div2 {
+  background-position: center;
+  background-size: cover;
   position: relative;
   -webkit-box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
           box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
@@ -215,6 +238,8 @@ header .reseau ul img {
   -ms-grid-column-span: 1;
   grid-area: 3 / 1 / 5 / 2;
   /* background: rgba(0, 0, 0, 0.5); */
+  background-position: center;
+  background-size: cover;
 }
 
 .page .grid .div4 {
@@ -264,7 +289,7 @@ header .reseau ul img {
 }
 
 .page .grid a {
-  color: white;
+  color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 900;
@@ -273,7 +298,7 @@ header .reseau ul img {
 }
 
 .page1 {
-  background-color: black;
+  /* background-color: rgb(234, 234, 234); */
   background: url("../assets/fond1.png");
   background-position: center;
   background-size: cover;
@@ -282,8 +307,31 @@ header .reseau ul img {
 }
 
 footer {
-  height: 10vh;
-  width: 100%;
+  padding: 20px;
   background-color: black;
+}
+
+footer .titre-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .titre-footer p {
+  color: white;
+  font-family: 'Water Brush', cursive;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+footer .titre-footer img {
+  width: 30px;
 }
 /*# sourceMappingURL=style.css.map */

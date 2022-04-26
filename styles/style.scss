@@ -4,15 +4,28 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    scroll-behavior: smooth;
+}
+.sous-page{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    background-color: rgb(234, 234, 234);
 }
 header{
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
-    padding: 20px;
+    padding: 30px;
     position: sticky;
     top: 0%;
     & #titre{
@@ -23,11 +36,14 @@ header{
     & .name{
         display: flex;
         align-items: center;
+        & img{
+            width: 50px;
+        }
     }
     & .list-menu{
         & ul{
             & li{
-                width: 125px;
+                width: 200px;
                 text-align: center;
             }
             display: flex;
@@ -48,7 +64,7 @@ header{
     & .reseau{
         & ul{
             & li{
-                width: 125px;
+                width: 110px;
                 text-align: center;
             }
             display: flex;
@@ -61,7 +77,7 @@ header{
 }
 #lien{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.8);
     font-weight: 900;
     text-transform: uppercase;
     font-family: arial;
@@ -105,6 +121,7 @@ header{
     background: url("../assets/fond2.png");
     background-position: center;
     background-size: cover;
+    /* background-color: rgb(234, 234, 234); */
     position: relative;
     & .grid{
         
@@ -134,6 +151,8 @@ header{
             
         }
         & .div2{
+            background-position: center;
+            background-size: cover;
             position: relative;
             box-shadow: 0 0 4px yellow,
             0 0 8px yellow,
@@ -159,6 +178,8 @@ header{
             justify-content: center;
             grid-area: 3 / 1 / 5 / 2;
             /* background: rgba(0, 0, 0, 0.5); */
+            background-position: center;
+            background-size: cover;
 
         }
         & .div4 { 
@@ -197,7 +218,7 @@ header{
             width: 100%;
         }
         & a{
-            color: white;
+            color: rgba(0, 0, 0, 0.8);
             text-transform: uppercase;
             text-decoration: none;
             font-weight: 900;
@@ -207,7 +228,7 @@ header{
     }
 }
 .page1{
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(234, 234, 234); */
     background: url("../assets/fond1.png");
     background-position: center;
     background-size: cover;
@@ -216,7 +237,23 @@ header{
 }
 
 footer{
-    height: 10vh;
-    width: 100%;
+    padding: 20px;
     background-color: black;
+
+    & .titre-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & p{
+            color: white;
+            font-family: 'Water Brush', cursive;
+            font-weight: 900;
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+
+        & img{
+            width: 30px;
+        }
+    }
 }
