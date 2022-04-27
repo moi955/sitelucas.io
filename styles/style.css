@@ -8,21 +8,6 @@
   scroll-behavior: smooth;
 }
 
-body {
-  scroll-behavior: smooth;
-}
-
-.sous-page {
-  width: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 100vh;
-  background-color: #eaeaea;
-}
-
 header {
   z-index: 10;
   display: -webkit-box;
@@ -35,7 +20,7 @@ header {
       justify-content: space-around;
   background-color: black;
   color: white;
-  padding: 30px;
+  padding: 20px;
   position: -webkit-sticky;
   position: sticky;
   top: 0%;
@@ -48,6 +33,7 @@ header #titre {
 }
 
 header .name {
+  /* border: 1px white solid; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,7 +62,7 @@ header .list-menu ul li {
 
 header .list-menu ul a {
   text-align: center;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: 900;
   font-family: 'Water Brush', cursive;
@@ -105,62 +91,98 @@ header .reseau ul img {
   width: 30px;
 }
 
-#lien {
+.page {
+  width: 100%;
+  height: 70vh;
+  background: url("../assets/img.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: back 16s ease-in-out infinite;
+          animation: back 16s ease-in-out infinite;
+}
+
+.page .button {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page .button #bnt {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 900;
-  text-transform: uppercase;
-  font-family: arial;
-  font-size: 75px;
-  letter-spacing: 10px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  padding: 20px 100px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-          box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-  font-family: 'Water Brush', cursive;
+  font-size: 2.5vw;
+  background: rgba(255, 255, 255, 0.685);
+  border-radius: 500px;
+  padding: 15px 100px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.541);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.541);
 }
 
-#lien::before {
-  content: "";
-  background: #e0e047;
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  -webkit-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
-  width: 0%;
-  height: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  z-index: -1;
-  border-radius: 10px;
+@-webkit-keyframes back {
+  0%, 100% {
+    background: url("../assets/img.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  25% {
+    background: url("../assets/img2.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  50% {
+    background: url("../assets/img3.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  75% {
+    background: url("../assets/img4.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 }
 
-#lien:hover::before {
-  width: 100%;
+@keyframes back {
+  0%, 100% {
+    background: url("../assets/img.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  25% {
+    background: url("../assets/img2.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  50% {
+    background: url("../assets/img3.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  75% {
+    background: url("../assets/img4.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 }
 
-.page {
+.page2 {
+  position: relative;
   width: 100%;
   height: 100vh;
   background-color: black;
-  background: url("../assets/fond2.png");
-  background-position: center;
-  background-size: cover;
-  /* background-color: rgb(234, 234, 234); */
-  position: relative;
 }
 
-.page .grid {
-  width: 60%;
-  height: 60vh;
+.page2 .grid {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -168,150 +190,63 @@ header .reseau ul img {
           transform: translate(-50%, -50%);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 60px;
-  grid-row-gap: 60px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  width: 70%;
+  height: 80vh;
 }
 
-.page .grid .div1 {
-  position: relative;
-  -webkit-box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-          box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.page2 .grid div {
+  background-color: red;
+}
+
+.page2 .grid #div1 {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
+  -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-area: 1 / 1 / 3 / 3;
+  grid-area: 1 / 1 / 2 / 3;
 }
 
-.page .grid .div2 {
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  -webkit-box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-          box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.page2 .grid #div2 {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
+  -ms-grid-row-span: 1;
   -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 3 / 3 / 4;
-  /* background: rgba(0, 0, 0, 0.5); */
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 3 / 2 / 5;
 }
 
-.page .grid .div3 {
-  position: relative;
-  -webkit-box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-          box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
+.page2 .grid #div3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-  grid-area: 3 / 1 / 5 / 2;
-  /* background: rgba(0, 0, 0, 0.5); */
-  background-position: center;
-  background-size: cover;
+  grid-area: 2 / 1 / 3 / 2;
 }
 
-.page .grid .div4 {
-  position: relative;
-  -webkit-box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-          box-shadow: 0 0 4px yellow, 0 0 8px yellow, inset 0 0 16px yellow, 0 0 32px yellow, inset 0 0 64px yellow;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
+.page2 .grid #div4 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: 3 / 2 / 5 / 4;
-  /* background: rgba(0, 0, 0, 0.5); */
+  -ms-grid-column-span: 3;
+  grid-area: 2 / 2 / 3 / 5;
 }
 
-.page .grid .div1::before,
-.page .grid .div2::before,
-.page .grid .div3::before,
-.page .grid .div4::before {
-  content: "";
-  background: #e0e047;
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  -webkit-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
-  width: 0%;
-  height: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  z-index: -1;
-}
-
-.page .grid .div1:hover::before,
-.page .grid .div2:hover::before,
-.page .grid .div3:hover::before,
-.page .grid .div4:hover::before {
-  width: 100%;
-}
-
-.page .grid a {
-  color: rgba(0, 0, 0, 0.8);
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 70px;
-  font-family: 'Water Brush', cursive;
-}
-
-.page1 {
-  /* background-color: rgb(234, 234, 234); */
-  background: url("../assets/fond1.png");
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
+.page2 .grid #div5 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 3 / 1 / 4 / 5;
 }
 
 footer {
-  padding: 20px;
-  background-color: black;
-}
-
-footer .titre-footer {
+  background: black;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,15 +258,22 @@ footer .titre-footer {
           justify-content: center;
 }
 
-footer .titre-footer p {
-  color: white;
-  font-family: 'Water Brush', cursive;
-  font-weight: 900;
-  font-size: 20px;
-  letter-spacing: 5px;
+footer #copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-footer .titre-footer img {
-  width: 30px;
+footer #copyright .name-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer #copyright .name-copy img {
+  width: 20px;
 }
 /*# sourceMappingURL=style.css.map */
