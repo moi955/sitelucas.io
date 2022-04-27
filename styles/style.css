@@ -94,11 +94,10 @@ header .reseau ul img {
 .page {
   width: 100%;
   height: 70vh;
-  background: url("../assets/img.jpg");
   background-position: center;
   background-size: cover;
-  -webkit-animation: back 16s ease-in-out infinite;
-          animation: back 16s ease-in-out infinite;
+  -webkit-animation: back 10s ease-in-out infinite;
+          animation: back 10s ease-in-out infinite;
 }
 
 .page .button {
@@ -182,6 +181,19 @@ header .reseau ul img {
   background-color: black;
 }
 
+.page2 nav {
+  text-align: center;
+}
+
+.page2 nav #description {
+  color: #fff;
+  font-weight: 900;
+  font-size: 3vw;
+  text-transform: uppercase;
+  font-family: arial;
+  text-align: center;
+}
+
 .page2 .grid {
   position: absolute;
   top: 50%;
@@ -201,7 +213,40 @@ header .reseau ul img {
 }
 
 .page2 .grid div {
-  background-color: red;
+  background: rgba(255, 255, 255, 0.685);
+}
+
+.page2 .grid div #filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
+  width: 100%;
+  height: 100%;
+}
+
+.page2 .grid div #filter:hover {
+  -webkit-backdrop-filter: grayscale(0%);
+          backdrop-filter: grayscale(0%);
+}
+
+.page2 .grid div #filter:hover a {
+  color: yellow;
+}
+
+.page2 .grid div a {
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 2.5vw;
+  color: rgba(255, 255, 255, 0.463);
+  text-transform: uppercase;
 }
 
 .page2 .grid #div1 {
@@ -210,6 +255,9 @@ header .reseau ul img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: 1 / 1 / 2 / 3;
+  background: url("../assets/chaleur.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .page2 .grid #div2 {
@@ -218,6 +266,9 @@ header .reseau ul img {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: 1 / 3 / 2 / 5;
+  background: url("../assets/convivial.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .page2 .grid #div3 {
@@ -226,6 +277,9 @@ header .reseau ul img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 2 / 1 / 3 / 2;
+  background: url("../assets/jeux.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .page2 .grid #div4 {
@@ -234,6 +288,9 @@ header .reseau ul img {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: 2 / 2 / 3 / 5;
+  background: url("../assets/aide.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .page2 .grid #div5 {
@@ -242,6 +299,9 @@ header .reseau ul img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: 3 / 1 / 4 / 5;
+  background: url("../assets/plus.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 footer {
@@ -275,5 +335,11 @@ footer #copyright .name-copy {
 
 footer #copyright .name-copy img {
   width: 20px;
+}
+
+.page3 {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
 }
 /*# sourceMappingURL=style.css.map */
